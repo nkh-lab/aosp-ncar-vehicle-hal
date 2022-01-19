@@ -1,0 +1,4 @@
+service nlab-vehicle-hal-1.0 /vendor/bin/hw/vendor.nlab.vehicle@1.0-service
+    class hal
+    user vehicle_network
+    group system

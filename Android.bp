@@ -1,0 +1,18 @@
+cc_binary {
+    name: "vendor.nlab.vehicle@1.0-service",
+    init_rc: ["vendor.nlab.vehicle@1.0-service.rc"],
+    vendor: true,
+    relative_install_path: "hw",
+
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+    ],
+    
+    srcs: ["src/*.cpp"],
+
+    shared_libs: [
+        "liblog",
+    ]
+}

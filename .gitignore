@@ -1,0 +1,40 @@
+# QtCreator #
+
+# Files
+*.autosave
+*.cflags
+*.config
+*.creator
+*.cxxflags
+*.files
+*.includes
+*.log
+*.swp
+*.user
+
+# Folders
+build/
+temp/
+
+# AndroidStudio #
+
+# Files
+*.iml
+local.properties
+
+# Folders
+.cxx/
+.DS_Store/
+.externalNativeBuild/
+.gradle/
+.idea/
+build/
+captures/
+
+# VisualStudioCode #
+
+# Files
+.project
+
+# Folders
+.settings/

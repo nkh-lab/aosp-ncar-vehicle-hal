@@ -1,0 +1,10 @@
+diff --git a/ncar_x86/device-ncar_x86.mk b/ncar_x86/device-ncar_x86.mk
+index 39fe9f9..d7969f1 100644
+--- a/ncar_x86/device-ncar_x86.mk
++++ b/ncar_x86/device-ncar_x86.mk
+@@ -1 +1,2 @@
+-$(call inherit-product-if-exists, vendor/nkh-lab/genivi-capi-someip-examples/aosp/config.mk)
+\ No newline at end of file
++$(call inherit-product-if-exists, vendor/nkh-lab/genivi-capi-someip-examples/aosp/config.mk)
++$(call inherit-product-if-exists, vendor/nkh-lab/vehicle-hal/vehicle-hal.mk)
+\ No newline at end of file

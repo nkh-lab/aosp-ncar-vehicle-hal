@@ -1,6 +1,7 @@
 cc_binary {
     name: "vendor.nlab.vehicle@1.0-service",
     init_rc: ["vendor.nlab.vehicle@1.0-service.rc"],
+    vintf_fragments: ["vendor.nlab.vehicle@1.0-service.xml"],
     vendor: true,
     relative_install_path: "hw",
 
@@ -10,9 +11,15 @@ cc_binary {
         "-Werror",
     ],
     
+    local_include_dirs: ["src"],
+
     srcs: ["src/*.cpp"],
 
     shared_libs: [
         "liblog",
+        "libutils",
+        "libhidlbase",
+        "android.hardware.automotive.vehicle@2.0",
+        "android.hardware.automotive.vehicle@2.0-manager-lib",
     ]
 }

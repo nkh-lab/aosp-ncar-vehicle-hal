@@ -2,7 +2,7 @@
 
 Project to research VHAL within AOSP
 
-Includes a dummy implementation of support for standard Google properties `hardware/interfaces/automotive/vehicle/2.0/types.hal`
+Includes a dummy implementation of support for Google's standard `SYSTEM` properties [hardware/interfaces/automotive/vehicle/2.0/types.hal](https://android.googlesource.com/platform/hardware/interfaces/+/refs/tags/android-11.0.0_r48/automotive/vehicle/2.0/types.hal) and an example of extending with custom `VENDOR` properties [vendor/nkh-lab/interfaces/vehicle/1.0/types.hal](https://github.com/nkh-lab/aosp-ncar-interfaces/blob/master/vehicle/1.0/types.hal)
 
 ## How to switch AOSP to given custom VHAL
 
@@ -12,3 +12,4 @@ Run [patches/switch-to-nlab-vhal.sh](patches/switch-to-nlab-vhal.sh) from AOSP r
 
 - [NCAR manifest](https://github.com/nkh-lab/aosp-ncar-manifest)
 - [NCAR device](https://github.com/nkh-lab/aosp-ncar-device)
+- [NCAR HAL interfaces](https://github.com/nkh-lab/aosp-ncar-interfaces)

@@ -21,5 +21,6 @@ cc_binary {
         "libhidlbase",
         "android.hardware.automotive.vehicle@2.0",
         "android.hardware.automotive.vehicle@2.0-manager-lib",
+        "vendor.nlab.vehicle@1.0",
     ]
 }

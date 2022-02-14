@@ -1,24 +1,25 @@
 //
 // Based on hardware/interfaces/automotive/vehicle/2.0/default/impl/vhal_v2_0/DefaultConfig.h
+// + VENDOR properties
 //
 
-// clang-format off
+#pragma once
 
-#ifndef android_hardware_automotive_vehicle_V2_0_impl_DefaultConfig_H_
-#define android_hardware_automotive_vehicle_V2_0_impl_DefaultConfig_H_
-
-#include <android/hardware/automotive/vehicle/2.0/types.h>
+#include <vendor/nlab/vehicle/1.0/types.h>
 #include <vhal_v2_0/VehicleUtils.h>
 
 #include <map>
 
-namespace android {
-namespace hardware {
-namespace automotive {
+using namespace android::hardware::automotive::vehicle::V2_0;
+
+namespace vendor {
+namespace nlab {
 namespace vehicle {
-namespace V2_0 {
+namespace V1_0 {
 
 namespace impl {
+// clang-format off
+
 //
 // Some handy constants to avoid conversions from enum to int.
 constexpr int ABS_ACTIVE = (int)VehicleProperty::ABS_ACTIVE;
@@ -1070,14 +1071,18 @@ const ConfigDeclaration kVehicleProperties[]{
                                 .changeMode = VehiclePropertyChangeMode::ON_CHANGE,
                         },
         },
+
+        {.config = {.prop = toInt(VehicleProperty::VENDOR_TEST_COUNTER),
+                    .access = VehiclePropertyAccess::READ_WRITE,
+                    .changeMode = VehiclePropertyChangeMode::ON_CHANGE},
+         .initialValue = {.int32Values = {555}}},
 };
 
-}  // impl
+// clang-format on
 
-}  // namespace V2_0
-}  // namespace vehicle
-}  // namespace automotive
-}  // namespace hardware
-}  // namespace android
+} // namespace impl
 
-#endif // android_hardware_automotive_vehicle_V2_0_impl_DefaultConfig_H_
+} // namespace V1_0
+} // namespace vehicle
+} // namespace nlab
+} // namespace vendor

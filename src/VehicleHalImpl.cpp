@@ -72,15 +72,14 @@ vhal_v2_0::StatusCode VehicleHalImpl::unsubscribe(int32_t property)
 
 void VehicleHalImpl::regPropsInPropStore()
 {
-    for (const auto& it : vhal_v2_0::impl::kVehicleProperties)
-        mPropStore->registerProperty(it.config);
+    for (const auto& it : kVehicleProperties) mPropStore->registerProperty(it.config);
 }
 
 void VehicleHalImpl::initPropsInPropStore()
 {
     static constexpr bool shouldUpdateStatus = true;
 
-    for (const auto& p : vhal_v2_0::impl::kVehicleProperties)
+    for (const auto& p : kVehicleProperties)
     {
         vhal_v2_0::VehiclePropValue prop = {.prop = p.config.prop};
 

@@ -1072,10 +1072,25 @@ const ConfigDeclaration kVehicleProperties[]{
                         },
         },
 
-        {.config = {.prop = toInt(VehicleProperty::VENDOR_TEST_COUNTER),
-                    .access = VehiclePropertyAccess::READ_WRITE,
-                    .changeMode = VehiclePropertyChangeMode::ON_CHANGE},
-         .initialValue = {.int32Values = {555}}},
+// Init custom VENDOR properties
+
+        {.config = 
+                        {
+                                .prop = toInt(VehicleProperty::VENDOR_TEST_1S_COUNTER),
+                                .access = VehiclePropertyAccess::READ_WRITE,
+                                .changeMode = VehiclePropertyChangeMode::ON_CHANGE,
+                        },
+         .initialValue = {.int32Values = {0}}},
+
+        {.config = 
+                       {
+                               .prop = toInt(VehicleProperty::VENDOR_TEST_500MS_COUNTER),
+                               .access = VehiclePropertyAccess::READ_WRITE,
+                               .changeMode = VehiclePropertyChangeMode::CONTINUOUS,
+                               .minSampleRate = 1.0f,
+                               .maxSampleRate = 10.0f,
+                       },
+        .initialValue = {.int32Values = {0}}},
 };
 
 // clang-format on

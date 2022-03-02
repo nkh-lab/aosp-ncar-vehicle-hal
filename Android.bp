@@ -4,6 +4,7 @@ cc_binary {
     vintf_fragments: ["vendor.nlab.vehicle@1.0-service.xml"],
     vendor: true,
     relative_install_path: "hw",
+    overrides: ["android.hardware.automotive.vehicle@2.0-service"],
 
     cflags: [
         "-Wall",
@@ -13,9 +14,10 @@ cc_binary {
     
     local_include_dirs: ["src"],
 
-    srcs: ["src/*.cpp"],
+    srcs: ["src/**/*.cpp"],
 
     shared_libs: [
+        "libbase",
         "liblog",
         "libutils",
         "libhidlbase",

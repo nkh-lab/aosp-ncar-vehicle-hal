@@ -1,4 +1,7 @@
 <manifest version="1.0" type="device">
+    <!-- 
+        Use override="true" attribute if HAL hardcoded in device manifest.xml
+    -->
     <hal format="hidl">
         <name>android.hardware.automotive.vehicle</name>
         <transport>hwbinder</transport>
@@ -9,5 +12,3 @@
         </interface>
     </hal>
 </manifest>
-
-    

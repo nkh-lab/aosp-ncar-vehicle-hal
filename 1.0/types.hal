@@ -1,0 +1,33 @@
+package vendor.nlab.vehicle@1.0;
+
+import android.hardware.automotive.vehicle@2.0;
+
+/**
+ * Extension of VehicleProperty enum declared in Vehicle HAL 2.0
+ */
+enum VehicleProperty: android.hardware.automotive.vehicle@2.0::VehicleProperty {
+
+    /**
+     * For research needs 1s counter
+     *
+     * @change_mode VehiclePropertyChangeMode:ON_CHANGE
+     * @access VehiclePropertyAccess:READ_WRITE
+     */
+    VENDOR_TEST_1S_COUNTER = (
+      0x0001
+      | VehiclePropertyGroup:VENDOR
+      | VehiclePropertyType:INT32
+      | VehicleArea:GLOBAL),
+
+      /**
+     * For research needs 100ms counter
+     *
+     * @change_mode VehiclePropertyChangeMode:CONTINUOUS
+     * @access VehiclePropertyAccess:READ_WRITE
+     */
+    VENDOR_TEST_500MS_COUNTER = (
+      0x0002
+      | VehiclePropertyGroup:VENDOR
+      | VehiclePropertyType:INT32
+      | VehicleArea:GLOBAL),
+};

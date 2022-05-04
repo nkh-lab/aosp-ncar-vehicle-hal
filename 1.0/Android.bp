@@ -1,0 +1,17 @@
+hidl_package_root {
+    name: "vendor.nlab.vehicle",
+    path: "vendor/nkh-lab/interfaces/automotive/vehicle",
+}
+
+hidl_interface {
+    name: "vendor.nlab.vehicle@1.0",
+    root: "vendor.nlab.vehicle",
+    srcs: [
+        "types.hal",
+    ],
+    interfaces: [
+        "android.hardware.automotive.vehicle@2.0",
+        "android.hidl.base@1.0",
+    ],
+    gen_java: true,
+}

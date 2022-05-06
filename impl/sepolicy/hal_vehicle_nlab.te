@@ -5,3 +5,5 @@ init_daemon_domain(hal_vehicle_nlab);
 
 hal_server_domain(hal_vehicle_nlab, hal_vehicle)
 
+# For changing VHAL property via System Property 
+get_prop(hal_vehicle_nlab, debug_prop)

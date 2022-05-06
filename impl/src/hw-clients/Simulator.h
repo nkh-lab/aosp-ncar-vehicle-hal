@@ -40,13 +40,17 @@ private:
     vhal_v2_0::StatusCode setVendorTest500msCounter(
         const vhal_v2_0::VehiclePropValue& value,
         bool updateStatus);
+    vhal_v2_0::StatusCode setVendorTestSysProp(const vhal_v2_0::VehiclePropValue& value, bool updateStatus);
+
     void simulateVendorTest1sCounter();
     void simulateVendorTest500msCounter();
+    void simulateVendorTestSysProp();
 
     std::thread mThread;
 
     SyncedVehiclePropValue mVendorTest1sCounter;
     SyncedVehiclePropValue mVendorTest500msCounter;
+    SyncedVehiclePropValue mVendorTestSysProp;
 };
 
 } // namespace impl

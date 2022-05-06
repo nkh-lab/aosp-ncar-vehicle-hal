@@ -19,7 +19,7 @@ enum VehicleProperty: android.hardware.automotive.vehicle@2.0::VehicleProperty {
       | VehiclePropertyType:INT32
       | VehicleArea:GLOBAL),
 
-      /**
+    /**
      * For research needs 100ms counter
      *
      * @change_mode VehiclePropertyChangeMode:CONTINUOUS
@@ -27,6 +27,18 @@ enum VehicleProperty: android.hardware.automotive.vehicle@2.0::VehicleProperty {
      */
     VENDOR_TEST_500MS_COUNTER = (
       0x0002
+      | VehiclePropertyGroup:VENDOR
+      | VehiclePropertyType:INT32
+      | VehicleArea:GLOBAL),
+
+    /**
+     * For research needs, binded with "debug.vendor.nkh-lab.VENDOR_TEST_SYS_PROP"
+     *
+     * @change_mode VehiclePropertyChangeMode:ON_CHANGE
+     * @access VehiclePropertyAccess:READ
+     */
+    VENDOR_TEST_SYS_PROP = (
+      0x0003
       | VehiclePropertyGroup:VENDOR
       | VehiclePropertyType:INT32
       | VehicleArea:GLOBAL),

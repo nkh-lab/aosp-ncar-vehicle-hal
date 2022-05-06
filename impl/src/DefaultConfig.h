@@ -1091,6 +1091,14 @@ const ConfigDeclaration kVehicleProperties[]{
                                .maxSampleRate = 10.0f,
                        },
         .initialValue = {.int32Values = {0}}},
+
+        {.config = 
+                        {
+                                .prop = toInt(VehicleProperty::VENDOR_TEST_SYS_PROP),
+                                .access = VehiclePropertyAccess::READ,
+                                .changeMode = VehiclePropertyChangeMode::ON_CHANGE,
+                        },
+         .initialValue = {.int32Values = {-1}}},
 };
 
 // clang-format on
